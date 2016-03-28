@@ -44,8 +44,9 @@ Start-DscConfiguration .\AddHost -force -wait
 ##Installation
 
 ###From the Powershell Gallery (Coming soon. Gimme a week for this)
+
 ```Powershell
-Install-Module TrustedHostResource
+Install-Module TrustedHostResource -force
 ```
 ###Manually
 1) Download the project code
