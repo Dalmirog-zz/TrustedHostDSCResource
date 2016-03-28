@@ -65,7 +65,7 @@ Start-DscConfiguration .\RemoveHost -force -wait
 
 ##Installation
 
-###From the Powershell Gallery (Coming soon. Gimme a week for this)
+###From the Powershell Gallery
 
 ```Powershell
 Install-Module TrustedHostResource -force
