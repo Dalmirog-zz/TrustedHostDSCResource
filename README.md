@@ -22,6 +22,8 @@ Set-Item WSMan:\localhost\client\trustedhosts "MachineNameOrIP" -force -Concaten
 This DSC resource helps you with this, add/removing hosts from this list.
 
 ##Usage
+
+###Adding/Making sure a host is on the trusted list
 ```Powershell
 Configuration AddHost
 {
@@ -39,6 +41,26 @@ AddHost
 
 #Run DSC configuration
 Start-DscConfiguration .\AddHost -force -wait
+```
+
+###Removing/Making sure a host is not the trusted list**
+```Powershell
+Configuration RemoveHost
+{
+   Import-DscResource -module TrustedHostResource
+
+        TrustedHost "Removing new host"
+        {
+           Ensure = 'Absent'
+           Name = "NY-Tentacle1" #Name/IP of the Machine you want to remove from trusted host.
+        }       
+}
+
+#Create .MOF file with configuration
+Remove
+
+#Run DSC configuration
+Start-DscConfiguration .\RemoveHost -force -wait
 ```
 
 ##Installation
