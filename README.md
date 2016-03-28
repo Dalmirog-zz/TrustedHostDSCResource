@@ -29,10 +29,10 @@ Configuration AddHost
 {
    Import-DscResource -module TrustedHostResource
 
-        TrustedHost "Adding new host"
+        TrustedHost "Adding trusted host"
         {
            Ensure = 'Present'
-           Name = "NY-Tentacle1" #Name/IP of the Machine you want to add as trusted host.
+           Name = "NY-WebServer1" #Name/IP of the Machine you want to add as trusted host.
         }       
 }
 
@@ -49,10 +49,10 @@ Configuration RemoveHost
 {
    Import-DscResource -module TrustedHostResource
 
-        TrustedHost "Removing new host"
+        TrustedHost "Removing trusted host"
         {
            Ensure = 'Absent'
-           Name = "NY-Tentacle1" #Name/IP of the Machine you want to remove from trusted host.
+           Name = "NY-WebServer1" #Name/IP of the Machine you want to remove from trusted host.
         }       
 }
 
