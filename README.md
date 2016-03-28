@@ -1,4 +1,4 @@
-# TrustedHostDSCResource
+# DSC Resource - TrustedHostResource
 
 When you need to remotely run Powershell on a machine, but your host is not in the same domain as the Target machine (which is the most common case when dealing with machines in your personal lab) and the target machine is not in the list of trusted hosts by your host, you'll usually run into this error:
 
@@ -57,7 +57,7 @@ Configuration RemoveHost
 }
 
 #Create .MOF file with configuration
-Remove
+RemoveHost
 
 #Run DSC configuration
 Start-DscConfiguration .\RemoveHost -force -wait
