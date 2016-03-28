@@ -32,7 +32,7 @@ PrivateData = @{
         Tags = @('DSC Resource', 'DSC', 'Trusted Hosts')
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://github.com/Dalmirog/TrustedHostResource'
+        ProjectUri = 'https://github.com/Dalmirog/TrustedHostDSCResource'
 
         # A URL to an icon representing this module.
         # IconUri = ''
