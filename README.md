@@ -43,7 +43,7 @@ AddHost
 Start-DscConfiguration .\AddHost -force -wait
 ```
 
-###Removing/Making sure a host is not the trusted list**
+###Removing/Making sure a host is not the trusted list
 ```Powershell
 Configuration RemoveHost
 {
