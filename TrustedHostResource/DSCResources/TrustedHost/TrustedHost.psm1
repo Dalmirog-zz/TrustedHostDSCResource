@@ -113,7 +113,10 @@ function stringifyhosts ([string[]]$hosts){
     $finalstring = ""
 
     foreach ($h in $hosts){
-        $finalstring += ",$h"
+        if ($h.length -gt 0)
+        {
+            $finalstring += ",$h"
+        }
     }
 
     return $finalstring.Remove(0,1)
